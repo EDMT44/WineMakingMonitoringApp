@@ -1,0 +1,6 @@
+C:\Users\edgar\source\repos\WineMakingMonitoringApp\WineMakingMonitoringAppSolution\WineFactory\bin\Debug\WineFactory.dll
+C:\Users\edgar\source\repos\WineMakingMonitoringApp\WineMakingMonitoringAppSolution\WineFactory\bin\Debug\WineFactory.pdb
+C:\Users\edgar\source\repos\WineMakingMonitoringApp\WineMakingMonitoringAppSolution\WineFactory\obj\Debug\WineFactory.csproj.AssemblyReference.cache
+C:\Users\edgar\source\repos\WineMakingMonitoringApp\WineMakingMonitoringAppSolution\WineFactory\obj\Debug\WineFactory.csproj.CoreCompileInputs.cache
+C:\Users\edgar\source\repos\WineMakingMonitoringApp\WineMakingMonitoringAppSolution\WineFactory\obj\Debug\WineFactory.dll
+C:\Users\edgar\source\repos\WineMakingMonitoringApp\WineMakingMonitoringAppSolution\WineFactory\obj\Debug\WineFactory.pdb
