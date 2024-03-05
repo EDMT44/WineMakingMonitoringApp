@@ -5,11 +5,9 @@ VisualStudioVersion = 17.1.32421.90
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WineFactory", "WineFactory\WineFactory.csproj", "{2870E6C0-DFA0-43CD-866F-FA3340F17282}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBAcces", "DBAcces\DBAcces.csproj", "{C9AFF851-61FA-44AF-8246-D839D5511F9E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DBAcces", "DBAcces\DBAcces.csproj", "{C9AFF851-61FA-44AF-8246-D839D5511F9E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp", "ConsoleApp\ConsoleApp.csproj", "{260DD882-7C25-4A7D-B438-6874641F55D6}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WineMakingMonitoringApp", "WineMakingMonitoringApp\WineMakingMonitoringApp.csproj", "{D53CB443-2C5D-449F-85E8-8AA3456A9279}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WineMakingMonitoringApp", "WineMakingMonitoringApp\WineMakingMonitoringApp.csproj", "{009077C7-4C17-49BF-99C7-88276DE5DF8D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,14 +23,10 @@ Global
 		{C9AFF851-61FA-44AF-8246-D839D5511F9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C9AFF851-61FA-44AF-8246-D839D5511F9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C9AFF851-61FA-44AF-8246-D839D5511F9E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{260DD882-7C25-4A7D-B438-6874641F55D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{260DD882-7C25-4A7D-B438-6874641F55D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{260DD882-7C25-4A7D-B438-6874641F55D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{260DD882-7C25-4A7D-B438-6874641F55D6}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D53CB443-2C5D-449F-85E8-8AA3456A9279}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D53CB443-2C5D-449F-85E8-8AA3456A9279}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D53CB443-2C5D-449F-85E8-8AA3456A9279}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D53CB443-2C5D-449F-85E8-8AA3456A9279}.Release|Any CPU.Build.0 = Release|Any CPU
+		{009077C7-4C17-49BF-99C7-88276DE5DF8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{009077C7-4C17-49BF-99C7-88276DE5DF8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{009077C7-4C17-49BF-99C7-88276DE5DF8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{009077C7-4C17-49BF-99C7-88276DE5DF8D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -7,7 +7,39 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="MainWindow.xaml">
+    <Compile Update="Views\Area.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\AreaSelection.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\InsertingContainer.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\InsertingWine.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\MainWindows.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Resources\BasicControlsStylesAndTemplates.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Area.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\AreaSelection.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\InsertingContainer.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\InsertingWine.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\MainWindows.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

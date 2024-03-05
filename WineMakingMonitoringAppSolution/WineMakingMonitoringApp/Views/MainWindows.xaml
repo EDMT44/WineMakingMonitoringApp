@@ -1,0 +1,39 @@
+﻿<Window x:Class="WineMakingMonitoringApp.Views.MainWindows"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:viewmodels="clr-namespace:WineMakingMonitoringApp.ViewModels" d:DataContext="{d:DesignInstance Type=viewmodels:MainWindowsViewModel}"
+        mc:Ignorable="d"
+        Title="MainWindows" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="9*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="7*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Row="0" Grid.Column="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0" Content=" + Vino" Margin="5 5 5 5" Command="{Binding CreateWineCommand}"
+                    IsEnabled="{Binding EnableAddWineButton}"/>
+            <Button Grid.Column="1" Content=" + Contenedor" Margin="5 5 5 5" Command="{Binding AddContainerCommand}"/>
+        </Grid>
+        <TextBox HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="5 5 5 5" Grid.Row="0" Grid.Column="1" Width="Auto" Text="... Buscar Vino ...." TextAlignment="Right" />
+        <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Vertical">
+            <Button Content="Ver Area" Margin="20 10 20 10"/>
+            <Button Content="Ver todos" Margin="20 10 20 10"/>
+            <Button Content="Ver existentes" Margin="20 10 20 10"/>
+            <Label Content="{Binding Texto}"/>
+        </StackPanel>
+        <ListBox x:Name="WinesListBox" Grid.Row="1" Grid.Column="1" 
+                 ScrollViewer.VerticalScrollBarVisibility="Auto" Margin="10 10 10 10"
+                 >
+            
+        </ListBox>
+    </Grid>
+</Window>
