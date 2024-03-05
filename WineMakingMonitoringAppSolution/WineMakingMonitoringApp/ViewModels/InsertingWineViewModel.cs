@@ -57,6 +57,7 @@ namespace WineMakingMonitoringApp.ViewModels
         {
             rep.InsertWine(InitialBrix, InitialDensity, HoneyWeight, Yeast, Notes, Date);
             rep.CommitChanges();
+            AddedWine?.Invoke(this, EventArgs.Empty);
             OnRequestClose?.Invoke(this, null);
         }
         public ICommand AddWineCommand
@@ -66,6 +67,7 @@ namespace WineMakingMonitoringApp.ViewModels
                 return addWineCommand ??= new CommandHandler(parameter => AddWine(), parameter => true);
             }
         }
+        public static event EventHandler AddedWine;
 
         public event EventHandler OnRequestClose;
 

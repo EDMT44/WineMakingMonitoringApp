@@ -21,27 +21,66 @@ namespace WineMakingMonitoringApp.ViewModels
         private CommandHandler createWineCommand;
         private CommandHandler addContainerCommand;
 
+        public WineListViewModel Wines { get; set; }
         public List<WineFactory.Container> Containers
         {
             get { return containers; }
             set
             {
-               
+                containers = value;
                 OnPropertyChanged(nameof(Containers));
                 OnPropertyChanged(nameof(EnableAddWineButton));
-               // OnPropertyChanged(nameof(Texto));
+                OnPropertyChanged(nameof(Texto));
             }
         }
-        public bool EnableAddWineButton => Containers.Count()>0;
-        public string Texto => "Contenedores disponibles: "+Containers.Count().ToString();
+        public void UpdateFreeContainers() 
+        { 
+            containers= (from c in wineRep.Containers
+                         where c.Empty == true
+                         select c).ToList();
+        }
+        public bool EnableAddWineButton
+        {
+            get
+            {
+                if (Containers != null && Containers.Count() > 0) { return true; }
+                else
+                {
+                    return false;
+                }
+            }
+        }
+        public string Texto
+        {
+            get
+            {
+                if (Containers != null) { return "Contenedores disponibles: " + Containers.Count().ToString(); }
+                else
+                {
+                    return "Contenedores disponibles: 0" ;
+                }
+            }
+        }
         public MainWindowsViewModel(Repository rep) : base(new List<BaseDetails<Wine>>())
         {
             wineRep = rep;
-            containers = (from c in wineRep.Containers
-                          where c.Empty == true
-                          select c).ToList();
-            
+            UpdateFreeContainers();
+            InsertingWineViewModel.AddedWine += (sender, args) => {
+                UpdateFreeContainers();
+            };
+            Wines = new WineListViewModel(new System.Collections.Generic.List<BaseDetails<Wine>>());
+            foreach (var wine in wineRep.Wines)
+            {
+                Wines.Collection.Add(new WineDetailsViewModel(wine));
+            }
+            //Wines.PropertyChanged += Wines_PropertyChanged;
         }
+
+        private void Wines_PropertyChanged(object? sender, PropertyChangedEventArgs e)
+        {
+           
+        }
+
         public void CreateWine()
         {
             NavigationService.ShowInsertingWineWindow(wineRep);

@@ -1886,11 +1886,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Estudio\\CUJAE\\TESIS\\CSTH\\CSTH scripts\\WineMakingMonitoringApp\\WineMakingMonitoringAppSolution\\DBAcces\\DBAcces.csproj",
+      "projectUniqueName": "C:\\Users\\edgar\\Desktop\\Proyecto\\WineMakingMonitoringAppSolution\\DBAcces\\DBAcces.csproj",
       "projectName": "DBAcces",
-      "projectPath": "E:\\Estudio\\CUJAE\\TESIS\\CSTH\\CSTH scripts\\WineMakingMonitoringApp\\WineMakingMonitoringAppSolution\\DBAcces\\DBAcces.csproj",
+      "projectPath": "C:\\Users\\edgar\\Desktop\\Proyecto\\WineMakingMonitoringAppSolution\\DBAcces\\DBAcces.csproj",
       "packagesPath": "C:\\Users\\edgar\\.nuget\\packages\\",
-      "outputPath": "E:\\Estudio\\CUJAE\\TESIS\\CSTH\\CSTH scripts\\WineMakingMonitoringApp\\WineMakingMonitoringAppSolution\\DBAcces\\obj\\",
+      "outputPath": "C:\\Users\\edgar\\Desktop\\Proyecto\\WineMakingMonitoringAppSolution\\DBAcces\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -1911,8 +1911,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "E:\\Estudio\\CUJAE\\TESIS\\CSTH\\CSTH scripts\\WineMakingMonitoringApp\\WineMakingMonitoringAppSolution\\WineFactory\\WineFactory.csproj": {
-              "projectPath": "E:\\Estudio\\CUJAE\\TESIS\\CSTH\\CSTH scripts\\WineMakingMonitoringApp\\WineMakingMonitoringAppSolution\\WineFactory\\WineFactory.csproj"
+            "C:\\Users\\edgar\\Desktop\\Proyecto\\WineMakingMonitoringAppSolution\\WineFactory\\WineFactory.csproj": {
+              "projectPath": "C:\\Users\\edgar\\Desktop\\Proyecto\\WineMakingMonitoringAppSolution\\WineFactory\\WineFactory.csproj"
             }
           }
         }

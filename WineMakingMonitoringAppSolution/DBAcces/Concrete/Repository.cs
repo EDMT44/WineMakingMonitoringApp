@@ -72,7 +72,7 @@ namespace DBAcces.Concrete
         public void InsertWine( float initialBrix, float initialDensity, float honeyWeight, float yeast, string notes, DateTime date)
         {
             var containers = from c in context.Containers
-                             where c.Empty == false
+                             where c.Empty == true
                              select c;
             if (containers != null)
             {
@@ -87,9 +87,10 @@ namespace DBAcces.Concrete
                     Notes = notes,
                     Date = date
                 });
-                GetContainerByKey(containers.First().ContainerId).Empty = true;
+                GetContainerByKey(containers.First().ContainerId).Empty = false;
             }
             else { throw new Exception("No hay contenedores vacios"); }
+
         }
 
         public void UpdateWine(int id, float finalBrix, float finalDensity)

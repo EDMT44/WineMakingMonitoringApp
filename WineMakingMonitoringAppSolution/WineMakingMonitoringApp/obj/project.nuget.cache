@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "60AvHGbgK8zm2kU+YjEBINf0fCdWaJKX5lL3rFSTwYck5WqGnirwfGLPxaxb/iOTHCM6FIBjW6q+khzjXaHOSg==",
+  "dgSpecHash": "IXXhC8Vszd6AbiY97AEoJQA5uLWdrgVg7rQHX+KYB1vZZ7le3vYUc6GzovTXcc6tOjxxUArrxHuks8gnfD79DQ==",
   "success": true,
-  "projectFilePath": "E:\\Estudio\\CUJAE\\TESIS\\CSTH\\CSTH scripts\\WineMakingMonitoringApp\\WineMakingMonitoringAppSolution\\WineMakingMonitoringApp\\WineMakingMonitoringApp.csproj",
+  "projectFilePath": "C:\\Users\\edgar\\Desktop\\Proyecto\\WineMakingMonitoringAppSolution\\WineMakingMonitoringApp\\WineMakingMonitoringApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\edgar\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\edgar\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",

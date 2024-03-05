@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DBAcces.Migrations
 {
     [DbContext(typeof(WineFactoryContext))]
-    [Migration("20240305014100_PrimeraMigracion")]
+    [Migration("20240305175459_PrimeraMigracion")]
     partial class PrimeraMigracion
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

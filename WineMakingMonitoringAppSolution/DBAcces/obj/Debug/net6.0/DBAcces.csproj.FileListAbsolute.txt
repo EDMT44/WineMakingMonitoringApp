@@ -15,3 +15,20 @@ E:\Estudio\CUJAE\TESIS\CSTH\CSTH scripts\WineMakingMonitoringApp\WineMakingMonit
 E:\Estudio\CUJAE\TESIS\CSTH\CSTH scripts\WineMakingMonitoringApp\WineMakingMonitoringAppSolution\DBAcces\obj\Debug\net6.0\DBAcces.pdb
 E:\Estudio\CUJAE\TESIS\CSTH\CSTH scripts\WineMakingMonitoringApp\WineMakingMonitoringAppSolution\DBAcces\obj\Debug\net6.0\DBAcces.genruntimeconfig.cache
 E:\Estudio\CUJAE\TESIS\CSTH\CSTH scripts\WineMakingMonitoringApp\WineMakingMonitoringAppSolution\DBAcces\obj\Debug\net6.0\ref\DBAcces.dll
+C:\Users\edgar\Desktop\Proyecto\WineMakingMonitoringAppSolution\DBAcces\bin\Debug\net6.0\DBAcces.deps.json
+C:\Users\edgar\Desktop\Proyecto\WineMakingMonitoringAppSolution\DBAcces\bin\Debug\net6.0\DBAcces.runtimeconfig.json
+C:\Users\edgar\Desktop\Proyecto\WineMakingMonitoringAppSolution\DBAcces\bin\Debug\net6.0\DBAcces.dll
+C:\Users\edgar\Desktop\Proyecto\WineMakingMonitoringAppSolution\DBAcces\bin\Debug\net6.0\DBAcces.pdb
+C:\Users\edgar\Desktop\Proyecto\WineMakingMonitoringAppSolution\DBAcces\bin\Debug\net6.0\WineFactory.dll
+C:\Users\edgar\Desktop\Proyecto\WineMakingMonitoringAppSolution\DBAcces\bin\Debug\net6.0\WineFactory.pdb
+C:\Users\edgar\Desktop\Proyecto\WineMakingMonitoringAppSolution\DBAcces\obj\Debug\net6.0\DBAcces.csproj.AssemblyReference.cache
+C:\Users\edgar\Desktop\Proyecto\WineMakingMonitoringAppSolution\DBAcces\obj\Debug\net6.0\DBAcces.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\edgar\Desktop\Proyecto\WineMakingMonitoringAppSolution\DBAcces\obj\Debug\net6.0\DBAcces.AssemblyInfoInputs.cache
+C:\Users\edgar\Desktop\Proyecto\WineMakingMonitoringAppSolution\DBAcces\obj\Debug\net6.0\DBAcces.AssemblyInfo.cs
+C:\Users\edgar\Desktop\Proyecto\WineMakingMonitoringAppSolution\DBAcces\obj\Debug\net6.0\DBAcces.csproj.CoreCompileInputs.cache
+C:\Users\edgar\Desktop\Proyecto\WineMakingMonitoringAppSolution\DBAcces\obj\Debug\net6.0\DBAcces.csproj.CopyComplete
+C:\Users\edgar\Desktop\Proyecto\WineMakingMonitoringAppSolution\DBAcces\obj\Debug\net6.0\DBAcces.dll
+C:\Users\edgar\Desktop\Proyecto\WineMakingMonitoringAppSolution\DBAcces\obj\Debug\net6.0\refint\DBAcces.dll
+C:\Users\edgar\Desktop\Proyecto\WineMakingMonitoringAppSolution\DBAcces\obj\Debug\net6.0\DBAcces.pdb
+C:\Users\edgar\Desktop\Proyecto\WineMakingMonitoringAppSolution\DBAcces\obj\Debug\net6.0\DBAcces.genruntimeconfig.cache
+C:\Users\edgar\Desktop\Proyecto\WineMakingMonitoringAppSolution\DBAcces\obj\Debug\net6.0\ref\DBAcces.dll

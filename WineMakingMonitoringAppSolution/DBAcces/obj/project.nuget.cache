@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "cPlFT2wPfMXf2wugLXThZ51JhNc6UtuFeCAdCWgcW2cvcNLeZrzfQs29RS9hXHfv7AHnVXWsBJRBCcVX6kbj8g==",
+  "dgSpecHash": "LinNaQwpP5ieyUIq7siwPq3vDDDjhgFQwSnl94KFEokYga4HYIZ2FjuhldOmM5jUdv/fE+ZBt/VFbgHPFGxOXQ==",
   "success": true,
-  "projectFilePath": "E:\\Estudio\\CUJAE\\TESIS\\CSTH\\CSTH scripts\\WineMakingMonitoringApp\\WineMakingMonitoringAppSolution\\DBAcces\\DBAcces.csproj",
+  "projectFilePath": "C:\\Users\\edgar\\Desktop\\Proyecto\\WineMakingMonitoringAppSolution\\DBAcces\\DBAcces.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\edgar\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\edgar\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

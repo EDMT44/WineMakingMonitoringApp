@@ -28,12 +28,26 @@
             <Button Content="Ver Area" Margin="20 10 20 10"/>
             <Button Content="Ver todos" Margin="20 10 20 10"/>
             <Button Content="Ver existentes" Margin="20 10 20 10"/>
-            <Label Content="{Binding Texto}"/>
+            <Label Content="{Binding Texto,UpdateSourceTrigger=PropertyChanged}"/>
         </StackPanel>
         <ListBox x:Name="WinesListBox" Grid.Row="1" Grid.Column="1" 
                  ScrollViewer.VerticalScrollBarVisibility="Auto" Margin="10 10 10 10"
-                 >
-            
+                 ItemsSource="{Binding Wines.Collection}" SelectedItem="{Binding Wines.Selected, Mode=TwoWay}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Border BorderThickness="1" BorderBrush="Black" HorizontalAlignment="Stretch" Width="Auto">
+                        <StackPanel HorizontalAlignment="Center" Orientation="Horizontal" >
+                            <Label HorizontalAlignment="Center" Content="Id del vino: "/>
+                            <TextBlock HorizontalAlignment="Center" Text="{Binding WineId, StringFormat=' {0}     '}" VerticalAlignment="Center"/>
+                            <Label Content="Fecha de creación: " HorizontalAlignment="Center"/>
+                            <TextBlock Text="{Binding Date,StringFormat=' {0}     '}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            <Label Content="Id del contenedor: " HorizontalAlignment="Center"/>
+                            <TextBlock Text="{Binding ContainerId,StringFormat=' {0}     '}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            <Button>Vaciar</Button>
+                        </StackPanel>
+                    </Border>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
         </ListBox>
     </Grid>
 </Window>
