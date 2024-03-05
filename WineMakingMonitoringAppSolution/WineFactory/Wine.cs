@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,38 +14,24 @@ namespace WineFactory
     
     public class Wine
     {
-        #region Properties
-        int ID { get; set; }
-        WineFlavor Flavor { get; set; }
-        float Brix { get; set; }
-        float Density { get; set; }
-        float HoneyWeight { get; set; }
-        float Yeast { get; set; }
-        String Notes { get; set; }
-        DateTime Date { get; set; }
+        
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int WineId { get; set; }
+        //public WineFlavor Flavor { get; set; }
+        public float InitialBrix { get; set; }
+        public float? FinalBrix { get; set; }
+        public float InitialDensity { get; set; }
+        public float? FinalDensity { get; set; }
+        public float HoneyWeight { get; set; }
+        public float Yeast { get; set; }
+        public string Notes { get; set; }
+        public DateTime Date { get; set; }
+        public int ContainerId { get; set; }
 
-        #endregion
-        #region Constructors
-        public Wine(int iD, WineFlavor flavor, float brix, float density, float honeyWeight, float yeast, string notes, DateTime date)
-        {
-            ID = iD;
-            Flavor = flavor;
-            Brix = brix;
-            Density = density;
-            HoneyWeight = honeyWeight;
-            Yeast = yeast;
-            Notes = notes;
-            Date = date;
-        }
-
-        #endregion
-        #region Methods
-        public double Age() {
-            return (DateTime.Now - Date).TotalDays;
-        }
-        #endregion
-        #region Events
-
-        #endregion
+        [ForeignKey("ContainerId")]
+        public virtual Container Container { get; set; }  
+        
+        
     }
 }

@@ -1,0 +1,17 @@
+E:\Estudio\CUJAE\TESIS\CSTH\CSTH scripts\WineMakingMonitoringApp\WineMakingMonitoringAppSolution\DBAcces\bin\Debug\net6.0\DBAcces.deps.json
+E:\Estudio\CUJAE\TESIS\CSTH\CSTH scripts\WineMakingMonitoringApp\WineMakingMonitoringAppSolution\DBAcces\bin\Debug\net6.0\DBAcces.runtimeconfig.json
+E:\Estudio\CUJAE\TESIS\CSTH\CSTH scripts\WineMakingMonitoringApp\WineMakingMonitoringAppSolution\DBAcces\bin\Debug\net6.0\DBAcces.dll
+E:\Estudio\CUJAE\TESIS\CSTH\CSTH scripts\WineMakingMonitoringApp\WineMakingMonitoringAppSolution\DBAcces\bin\Debug\net6.0\DBAcces.pdb
+E:\Estudio\CUJAE\TESIS\CSTH\CSTH scripts\WineMakingMonitoringApp\WineMakingMonitoringAppSolution\DBAcces\bin\Debug\net6.0\WineFactory.dll
+E:\Estudio\CUJAE\TESIS\CSTH\CSTH scripts\WineMakingMonitoringApp\WineMakingMonitoringAppSolution\DBAcces\bin\Debug\net6.0\WineFactory.pdb
+E:\Estudio\CUJAE\TESIS\CSTH\CSTH scripts\WineMakingMonitoringApp\WineMakingMonitoringAppSolution\DBAcces\obj\Debug\net6.0\DBAcces.csproj.AssemblyReference.cache
+E:\Estudio\CUJAE\TESIS\CSTH\CSTH scripts\WineMakingMonitoringApp\WineMakingMonitoringAppSolution\DBAcces\obj\Debug\net6.0\DBAcces.GeneratedMSBuildEditorConfig.editorconfig
+E:\Estudio\CUJAE\TESIS\CSTH\CSTH scripts\WineMakingMonitoringApp\WineMakingMonitoringAppSolution\DBAcces\obj\Debug\net6.0\DBAcces.AssemblyInfoInputs.cache
+E:\Estudio\CUJAE\TESIS\CSTH\CSTH scripts\WineMakingMonitoringApp\WineMakingMonitoringAppSolution\DBAcces\obj\Debug\net6.0\DBAcces.AssemblyInfo.cs
+E:\Estudio\CUJAE\TESIS\CSTH\CSTH scripts\WineMakingMonitoringApp\WineMakingMonitoringAppSolution\DBAcces\obj\Debug\net6.0\DBAcces.csproj.CoreCompileInputs.cache
+E:\Estudio\CUJAE\TESIS\CSTH\CSTH scripts\WineMakingMonitoringApp\WineMakingMonitoringAppSolution\DBAcces\obj\Debug\net6.0\DBAcces.csproj.CopyComplete
+E:\Estudio\CUJAE\TESIS\CSTH\CSTH scripts\WineMakingMonitoringApp\WineMakingMonitoringAppSolution\DBAcces\obj\Debug\net6.0\DBAcces.dll
+E:\Estudio\CUJAE\TESIS\CSTH\CSTH scripts\WineMakingMonitoringApp\WineMakingMonitoringAppSolution\DBAcces\obj\Debug\net6.0\refint\DBAcces.dll
+E:\Estudio\CUJAE\TESIS\CSTH\CSTH scripts\WineMakingMonitoringApp\WineMakingMonitoringAppSolution\DBAcces\obj\Debug\net6.0\DBAcces.pdb
+E:\Estudio\CUJAE\TESIS\CSTH\CSTH scripts\WineMakingMonitoringApp\WineMakingMonitoringAppSolution\DBAcces\obj\Debug\net6.0\DBAcces.genruntimeconfig.cache
+E:\Estudio\CUJAE\TESIS\CSTH\CSTH scripts\WineMakingMonitoringApp\WineMakingMonitoringAppSolution\DBAcces\obj\Debug\net6.0\ref\DBAcces.dll

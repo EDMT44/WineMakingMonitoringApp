@@ -1,0 +1,57 @@
+﻿<Window x:Class="WineMakingMonitoringApp.Views.InsertingWine"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:viewmodels="clr-namespace:WineMakingMonitoringApp.ViewModels" d:DataContext="{d:DesignInstance Type=viewmodels:InsertingWineViewModel}"
+        mc:Ignorable="d"
+        Title="InsertingWine" Height="450" Width="800">
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="5*"/>
+                <ColumnDefinition Width="5*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Label HorizontalAlignment="Center" 
+                   Grid.Row="0" Grid.Column="0">Grados Brix iniciales</Label>
+            <TextBox IsReadOnly="false" HorizontalAlignment="Center" 
+                     Grid.Row="1" Grid.Column="0" Text="{Binding InitialBrix, Mode=TwoWay}"/>
+            <Label HorizontalAlignment="Center" 
+                   Grid.Row="0" Grid.Column="1">Densidad inicial</Label>
+            <TextBox IsReadOnly="false" HorizontalAlignment="Center" 
+                     Grid.Row="1" Grid.Column="1" Text="{Binding InitialDensity, Mode=TwoWay}"/>
+            <Label HorizontalAlignment="Center" 
+                   Grid.Row="2" Grid.Column="0">Cantidad de miel (en Kg)</Label>
+            <TextBox IsReadOnly="false" HorizontalAlignment="Center" 
+                     Grid.Row="3" Grid.Column="0" Text="{Binding HoneyWeight, Mode=TwoWay}"/>
+            <Label HorizontalAlignment="Center" 
+                   Grid.Row="2" Grid.Column="1">Cantidad de levadura (en g)</Label>
+            <TextBox IsReadOnly="false" HorizontalAlignment="Center" 
+                     Grid.Row="3" Grid.Column="1" Text="{Binding Yeast, Mode=TwoWay}"/>
+            <Label HorizontalAlignment="Center" 
+                   Grid.Row="4" Grid.Column="0">Fecha</Label>
+            <DatePicker Grid.Row="5" Grid.Column="0" HorizontalAlignment="Center" SelectedDate="{Binding Date, Mode=TwoWay}"/>
+        </Grid>
+        <Label Grid.Row="1" HorizontalAlignment="Center">Notas</Label>
+        <TextBox Grid.Row="2" IsReadOnly="false" HorizontalAlignment="Stretch" Width="Auto" Margin="10 10 10 10" Height="100" BorderBrush="Black"/>
+        <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Center" >
+            <Button Padding="10" Margin="10 5 10 5" Command="{Binding AddWineCommand}">Agregar</Button>
+            <Button Padding="10" Margin="10 5 10 5">Cancelar</Button>
+        </StackPanel>
+    </Grid>
+    
+</Window>

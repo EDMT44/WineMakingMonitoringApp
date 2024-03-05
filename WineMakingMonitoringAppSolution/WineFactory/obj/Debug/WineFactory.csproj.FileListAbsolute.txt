@@ -4,3 +4,11 @@ C:\Users\edgar\source\repos\WineMakingMonitoringApp\WineMakingMonitoringAppSolut
 C:\Users\edgar\source\repos\WineMakingMonitoringApp\WineMakingMonitoringAppSolution\WineFactory\obj\Debug\WineFactory.csproj.CoreCompileInputs.cache
 C:\Users\edgar\source\repos\WineMakingMonitoringApp\WineMakingMonitoringAppSolution\WineFactory\obj\Debug\WineFactory.dll
 C:\Users\edgar\source\repos\WineMakingMonitoringApp\WineMakingMonitoringAppSolution\WineFactory\obj\Debug\WineFactory.pdb
+E:\Estudio\CUJAE\TESIS\CSTH\CSTH scripts\WineMakingMonitoringApp\WineMakingMonitoringAppSolution\WineFactory\bin\Debug\WineFactory.dll
+E:\Estudio\CUJAE\TESIS\CSTH\CSTH scripts\WineMakingMonitoringApp\WineMakingMonitoringAppSolution\WineFactory\bin\Debug\WineFactory.pdb
+E:\Estudio\CUJAE\TESIS\CSTH\CSTH scripts\WineMakingMonitoringApp\WineMakingMonitoringAppSolution\WineFactory\bin\Debug\System.ComponentModel.Annotations.dll
+E:\Estudio\CUJAE\TESIS\CSTH\CSTH scripts\WineMakingMonitoringApp\WineMakingMonitoringAppSolution\WineFactory\obj\Debug\WineFactory.csproj.AssemblyReference.cache
+E:\Estudio\CUJAE\TESIS\CSTH\CSTH scripts\WineMakingMonitoringApp\WineMakingMonitoringAppSolution\WineFactory\obj\Debug\WineFactory.csproj.CoreCompileInputs.cache
+E:\Estudio\CUJAE\TESIS\CSTH\CSTH scripts\WineMakingMonitoringApp\WineMakingMonitoringAppSolution\WineFactory\obj\Debug\WineFactory.csproj.CopyComplete
+E:\Estudio\CUJAE\TESIS\CSTH\CSTH scripts\WineMakingMonitoringApp\WineMakingMonitoringAppSolution\WineFactory\obj\Debug\WineFactory.dll
+E:\Estudio\CUJAE\TESIS\CSTH\CSTH scripts\WineMakingMonitoringApp\WineMakingMonitoringAppSolution\WineFactory\obj\Debug\WineFactory.pdb

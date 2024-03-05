@@ -1,0 +1,20 @@
+﻿WineMakingMonitoringApp
+
+
+winexe
+C#
+.cs
+E:\Estudio\CUJAE\TESIS\CSTH\CSTH scripts\WineMakingMonitoringApp\WineMakingMonitoringAppSolution\WineMakingMonitoringApp\obj\Release\net6.0-windows\
+WineMakingMonitoringApp
+none
+false
+TRACE;RELEASE;NET;NET6_0;NETCOREAPP
+E:\Estudio\CUJAE\TESIS\CSTH\CSTH scripts\WineMakingMonitoringApp\WineMakingMonitoringAppSolution\WineMakingMonitoringApp\App.xaml
+6-1427564851
+
+20-223140626
+219-884735512
+Resources\BasicControlsStylesAndTemplates.xaml;Views\Area.xaml;Views\AreaSelection.xaml;Views\InsertingContainer.xaml;Views\InsertingWine.xaml;Views\MainWindows.xaml;
+
+True
+

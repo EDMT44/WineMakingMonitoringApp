@@ -1,0 +1,34 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!--Begin Colors-->
+    <SolidColorBrush x:Key="TextBox.Focus.Background" Color="LightYellow"/>
+    <SolidColorBrush x:Key="TextBox.ReadOnly.Background" Color="#EFEFEF"/>
+    <!--End Colors-->
+
+    <!--Begin Styles-->
+    <Style TargetType="TextBlock" x:Key="HeaderTextBlock">
+        <Setter Property="FontWeight" Value="Black"/>
+    </Style>
+
+    <Style TargetType="{x:Type TextBox}">
+        <Setter Property="Width" Value="200"/>
+        <Setter Property="Padding" Value="2"/>
+        <Setter Property="FontFamily" Value="Segoe UI" />
+        <Setter Property="Foreground" Value="Black" />
+        <Setter Property="BorderBrush" Value="LightGray"/>
+        <Style.Triggers>
+            <Trigger Property="IsFocused" Value="true">
+                <Setter Property="Background" Value="{StaticResource TextBox.Focus.Background}" />
+            </Trigger>
+            <Trigger Property="IsReadOnly" Value="true">
+                <Setter Property="Background" Value="{StaticResource TextBox.ReadOnly.Background}" />
+            </Trigger>
+            <Trigger Property="Validation.HasError" Value="True">
+                <Setter Property="ToolTip" 
+                            Value="{Binding RelativeSource={RelativeSource Self}, Path=(Validation.Errors)[0].ErrorContent}" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+    <!--End Styles-->
+</ResourceDictionary>

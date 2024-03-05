@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\edgar\source\repos\WineMakingMonitoringApp\WineMakingMonitoringAppSolution\WineMakingMonitoringApp\obj\Debug\net6.0-windows\
+E:\Estudio\CUJAE\TESIS\CSTH\CSTH scripts\WineMakingMonitoringApp\WineMakingMonitoringAppSolution\WineMakingMonitoringApp\obj\Debug\net6.0-windows\
 WineMakingMonitoringApp
 none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
-C:\Users\edgar\source\repos\WineMakingMonitoringApp\WineMakingMonitoringAppSolution\WineMakingMonitoringApp\App.xaml
-11407045341
+E:\Estudio\CUJAE\TESIS\CSTH\CSTH scripts\WineMakingMonitoringApp\WineMakingMonitoringAppSolution\WineMakingMonitoringApp\App.xaml
+6-1427564851
 
-51639290651
-216-38113826
-MainWindow.xaml;
+191754254552
+21691342794
+Resources\BasicControlsStylesAndTemplates.xaml;Views\Area.xaml;Views\AreaSelection.xaml;Views\InsertingContainer.xaml;Views\InsertingWine.xaml;Views\MainWindows.xaml;
 
 True
 
