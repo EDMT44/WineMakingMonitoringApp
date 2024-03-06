@@ -15,7 +15,7 @@ namespace WineMakingMonitoringApp.ViewModels
             set
             {
                 CurrentEntity.Name = value;
-                OnPropertyChanged(nameof(Name));
+                //OnPropertyChanged(nameof(Name));
             }
         }
        

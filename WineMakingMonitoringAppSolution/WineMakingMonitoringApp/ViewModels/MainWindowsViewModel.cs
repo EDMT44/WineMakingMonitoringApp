@@ -20,59 +20,102 @@ namespace WineMakingMonitoringApp.ViewModels
 
         private CommandHandler createWineCommand;
         private CommandHandler addContainerCommand;
-
-        public WineListViewModel Wines { get; set; }
+        private WineListViewModel wines;
+        public WineListViewModel Wines 
+        { 
+            get 
+            {
+                return wines; 
+            } 
+            set 
+            {
+                wines = value;
+                OnPropertyChanged(); 
+            } 
+        }
         public List<WineFactory.Container> Containers
         {
             get { return containers; }
             set
             {
                 containers = value;
-                OnPropertyChanged(nameof(Containers));
-                OnPropertyChanged(nameof(EnableAddWineButton));
-                OnPropertyChanged(nameof(Texto));
+                //OnPropertyChanged(nameof(Containers));
+                OnPropertyChanged();
+                //OnPropertyChanged(nameof(EnableAddWineButton));
+                //OnPropertyChanged(nameof(Texto));
             }
         }
         public void UpdateFreeContainers() 
         { 
-            containers= (from c in wineRep.Containers
+            Containers = (from c in wineRep.Containers
                          where c.Empty == true
                          select c).ToList();
+
+            if (Containers != null) { Texto = "Contenedores disponibles: " + Containers.Count().ToString(); }
+            else
+            {
+                Texto = "Contenedores disponibles: 0";
+            }
         }
+        public void UpdateWines()
+        {
+            Wines.Collection.Clear();
+            foreach (var wine in wineRep.Wines)
+            {
+                Wines.Collection.Add(new WineDetailsViewModel(wineRep, wine));
+            }
+        }
+        public void UpdateButton()
+        {
+            if (Containers != null && Containers.Count() > 0) 
+            {
+                EnableAddWineButton = true; 
+            }
+            else
+            {
+                EnableAddWineButton = false;
+            }
+        }
+        private bool enableAddWineButton;
         public bool EnableAddWineButton
         {
             get
             {
-                if (Containers != null && Containers.Count() > 0) { return true; }
-                else
-                {
-                    return false;
-                }
+                return enableAddWineButton;
+                
+            }
+            set 
+            { 
+                enableAddWineButton = value;
+                OnPropertyChanged();
             }
         }
+        private string texto;
         public string Texto
         {
             get
             {
-                if (Containers != null) { return "Contenedores disponibles: " + Containers.Count().ToString(); }
-                else
-                {
-                    return "Contenedores disponibles: 0" ;
-                }
+                return texto;
             }
+            set 
+            {
+                texto = value;
+                OnPropertyChanged();
+            }
+
         }
         public MainWindowsViewModel(Repository rep) : base(new List<BaseDetails<Wine>>())
         {
             wineRep = rep;
             UpdateFreeContainers();
+            UpdateButton();
             InsertingWineViewModel.AddedWine += (sender, args) => {
                 UpdateFreeContainers();
+                UpdateWines();
+                UpdateButton();
             };
             Wines = new WineListViewModel(new System.Collections.Generic.List<BaseDetails<Wine>>());
-            foreach (var wine in wineRep.Wines)
-            {
-                Wines.Collection.Add(new WineDetailsViewModel(wine));
-            }
+            UpdateWines();
             //Wines.PropertyChanged += Wines_PropertyChanged;
         }
 
@@ -106,8 +149,9 @@ namespace WineMakingMonitoringApp.ViewModels
 
 
         public event EventHandler OnRequestClose;
+
         public event PropertyChangedEventHandler PropertyChanged;
-        protected virtual void OnPropertyChanged(string propertyName)
+        public void OnPropertyChanged(string propertyName)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }

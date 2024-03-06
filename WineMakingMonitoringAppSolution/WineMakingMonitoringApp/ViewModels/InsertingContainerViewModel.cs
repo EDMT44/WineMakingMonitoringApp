@@ -16,7 +16,7 @@ namespace WineMakingMonitoringApp.ViewModels
        
         private CommandHandler addingContainerCommand;
         public Container Container = new Container();
-       
+        public LocalListViewModel Locals { get; set; }
 
         private Repository rep;
         public int Capacity
@@ -27,15 +27,12 @@ namespace WineMakingMonitoringApp.ViewModels
         public InsertingContainerViewModel(Repository rep) : base(new List<BaseDetails<Local>>())
         {
             this.rep = rep;
-            
+            Locals = new LocalListViewModel(new List<BaseDetails<Local>>());
             foreach (var local in rep.Locals)
             {
-                Collection.Add(new LocalDetailsViewModel(new Local
-                {
-                    Name = local.Name,
-                }));
+                Locals.Collection.Add(new LocalDetailsViewModel(local));
             }
-            Selected = Collection.First();
+            Locals.Selected = Locals.Collection.First();
         }
         
         public ICommand AddingContainerCommand
@@ -49,7 +46,7 @@ namespace WineMakingMonitoringApp.ViewModels
 
         public void AddingContainer()
         {
-            rep.InsertContainer(Container.Capacity, Selected.CurrentEntity);
+            rep.InsertContainer(Container.Capacity, Locals.Selected.CurrentEntity);
             rep.CommitChanges();
             OnRequestClose?.Invoke(this, null);
         }

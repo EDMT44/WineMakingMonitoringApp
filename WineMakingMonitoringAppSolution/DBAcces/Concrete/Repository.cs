@@ -117,7 +117,7 @@ namespace DBAcces.Concrete
 
         public void InsertContainer(int capacity, Local local)
         {
-            context.Containers.Add(new Container { Capacity = capacity, Empty = true, Local = local, LocalId = local.LocalId}) ;
+            context.Containers.Add(new Container { Capacity = capacity, Empty = true, LocalId = local.LocalId}) ;
         }
 
         public void DeleteContainer(int id)

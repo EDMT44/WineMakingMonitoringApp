@@ -20,7 +20,7 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <Button Grid.Column="0" Content=" + Vino" Margin="5 5 5 5" Command="{Binding CreateWineCommand}"
-                    IsEnabled="{Binding EnableAddWineButton}"/>
+                    IsEnabled="{Binding EnableAddWineButton, UpdateSourceTrigger=PropertyChanged}"/>
             <Button Grid.Column="1" Content=" + Contenedor" Margin="5 5 5 5" Command="{Binding AddContainerCommand}"/>
         </Grid>
         <TextBox HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="5 5 5 5" Grid.Row="0" Grid.Column="1" Width="Auto" Text="... Buscar Vino ...." TextAlignment="Right" />
@@ -28,11 +28,12 @@
             <Button Content="Ver Area" Margin="20 10 20 10"/>
             <Button Content="Ver todos" Margin="20 10 20 10"/>
             <Button Content="Ver existentes" Margin="20 10 20 10"/>
-            <Label Content="{Binding Texto,UpdateSourceTrigger=PropertyChanged}"/>
+            <Label Content="{Binding Texto, UpdateSourceTrigger=PropertyChanged, Mode=OneWay}"/>
+            
         </StackPanel>
         <ListBox x:Name="WinesListBox" Grid.Row="1" Grid.Column="1" 
                  ScrollViewer.VerticalScrollBarVisibility="Auto" Margin="10 10 10 10"
-                 ItemsSource="{Binding Wines.Collection}" SelectedItem="{Binding Wines.Selected, Mode=TwoWay}">
+                 ItemsSource="{Binding Wines.Collection, UpdateSourceTrigger=PropertyChanged}" SelectedItem="{Binding Wines.Selected, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <Border BorderThickness="1" BorderBrush="Black" HorizontalAlignment="Stretch" Width="Auto">
@@ -43,7 +44,10 @@
                             <TextBlock Text="{Binding Date,StringFormat=' {0}     '}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                             <Label Content="Id del contenedor: " HorizontalAlignment="Center"/>
                             <TextBlock Text="{Binding ContainerId,StringFormat=' {0}     '}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            <Label Content="Local: " HorizontalAlignment="Center"/>
+                            <TextBlock Text="{Binding LocalName, StringFormat=' {0}     '}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                             <Button>Vaciar</Button>
+                            
                         </StackPanel>
                     </Border>
                 </DataTemplate>

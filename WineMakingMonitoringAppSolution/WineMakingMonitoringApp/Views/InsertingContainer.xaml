@@ -5,13 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WineMakingMonitoringApp.Views"
         mc:Ignorable="d"
-        Title="InsertingContainer" Height="Auto" Width="Auto">
+        Title="InsertingContainer" Height="200" Width="300">
     <Grid>
         <StackPanel>
             <Label HorizontalAlignment="Center">Añadiendo nuevo contenedor</Label>
             <TextBox Margin="5 5 5 5" Text="{Binding Capacity, Mode=TwoWay}"/>
             <ComboBox Margin="5 5 5 5" HorizontalAlignment="Center" Width="Auto"
-                      ItemsSource="{Binding Collection}"
+                      ItemsSource="{Binding Locals.Collection}"
                       SelectedItem="{Binding Selected, Mode=TwoWay}"/>
             <Button Command="{Binding AddingContainerCommand}" HorizontalAlignment="Center">Agregar</Button>
         </StackPanel>
