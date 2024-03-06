@@ -34,6 +34,7 @@ namespace DBAcces.Concrete
             if (wineToDelete != null)
             {
                 context.Wines.Remove(wineToDelete);
+                GetContainerByKey(wineToDelete.ContainerId).Empty = true;
             }
         }
 

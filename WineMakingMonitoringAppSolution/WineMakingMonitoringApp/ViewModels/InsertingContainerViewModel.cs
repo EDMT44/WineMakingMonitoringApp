@@ -48,8 +48,10 @@ namespace WineMakingMonitoringApp.ViewModels
         {
             rep.InsertContainer(Container.Capacity, Locals.Selected.CurrentEntity);
             rep.CommitChanges();
+            AddedContainer?.Invoke(this, null);
             OnRequestClose?.Invoke(this, null);
         }
+        public static event EventHandler AddedContainer;
 
         public event EventHandler OnRequestClose;
     }

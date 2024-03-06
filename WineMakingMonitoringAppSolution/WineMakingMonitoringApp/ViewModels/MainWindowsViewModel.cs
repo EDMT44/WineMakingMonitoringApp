@@ -20,6 +20,7 @@ namespace WineMakingMonitoringApp.ViewModels
 
         private CommandHandler createWineCommand;
         private CommandHandler addContainerCommand;
+        private CommandHandler deleteWineCommand;
         private WineListViewModel wines;
         public WineListViewModel Wines 
         { 
@@ -39,10 +40,7 @@ namespace WineMakingMonitoringApp.ViewModels
             set
             {
                 containers = value;
-                //OnPropertyChanged(nameof(Containers));
                 OnPropertyChanged();
-                //OnPropertyChanged(nameof(EnableAddWineButton));
-                //OnPropertyChanged(nameof(Texto));
             }
         }
         public void UpdateFreeContainers() 
@@ -64,6 +62,7 @@ namespace WineMakingMonitoringApp.ViewModels
             {
                 Wines.Collection.Add(new WineDetailsViewModel(wineRep, wine));
             }
+            //Selected = Wines.Collection.First();
         }
         public void UpdateButton()
         {
@@ -114,14 +113,20 @@ namespace WineMakingMonitoringApp.ViewModels
                 UpdateWines();
                 UpdateButton();
             };
+            InsertingContainerViewModel.AddedContainer += (sender, args) => {
+                UpdateFreeContainers();
+                UpdateButton();
+            };
             Wines = new WineListViewModel(new System.Collections.Generic.List<BaseDetails<Wine>>());
             UpdateWines();
             //Wines.PropertyChanged += Wines_PropertyChanged;
+            Wines.PropertyChanged += Wines_PropertyChanged;
         }
 
         private void Wines_PropertyChanged(object? sender, PropertyChangedEventArgs e)
         {
-           
+            if (e.PropertyName == "Selected")
+                DeleteWineCommand.RaiseCanExecuteChanged(sender, e);
         }
 
         public void CreateWine()
@@ -131,6 +136,14 @@ namespace WineMakingMonitoringApp.ViewModels
         public void AddContainer()
         {
             NavigationService.ShowInsertingContainerWindow(wineRep);
+        }
+        public void DeleteWine(WineDetailsViewModel wineToRemove)
+        {
+            wineRep.DeleteWine(wineToRemove.WineId);
+            wineRep.CommitChanges();
+            UpdateButton();
+            UpdateFreeContainers();
+            UpdateWines();
         }
         public ICommand CreateWineCommand
         {
@@ -146,7 +159,13 @@ namespace WineMakingMonitoringApp.ViewModels
                 return addContainerCommand ?? (addContainerCommand = new CommandHandler(parameter => AddContainer(), parameter => true));
             }
         }
-
+        public CommandHandler DeleteWineCommand
+        {
+            get
+            {
+                return deleteWineCommand ?? (deleteWineCommand = new CommandHandler(parameter => DeleteWine((WineDetailsViewModel)Wines.Selected), parameter => Wines.Selected!=null));
+            }
+        }
 
         public event EventHandler OnRequestClose;
 
