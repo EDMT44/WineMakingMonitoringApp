@@ -15,13 +15,19 @@ namespace WineMakingMonitoringApp.ViewModels
 {
     public class MainWindowsViewModel : BaseList<Wine>
     {
+        #region Fields
         private Repository wineRep;
         private List<WineFactory.Container> containers;
-
+        private WineListViewModel wines;
+        private bool enableAddWineButton;
+        private string texto;
         private CommandHandler createWineCommand;
         private CommandHandler addContainerCommand;
         private CommandHandler deleteWineCommand;
-        private WineListViewModel wines;
+
+        #endregion
+
+        #region Properties
         public WineListViewModel Wines 
         { 
             get 
@@ -43,6 +49,98 @@ namespace WineMakingMonitoringApp.ViewModels
                 OnPropertyChanged();
             }
         }
+        public bool EnableAddWineButton
+        {
+            get
+            {
+                return enableAddWineButton;
+                
+            }
+            set 
+            { 
+                enableAddWineButton = value;
+                OnPropertyChanged();
+            }
+        }
+        public string Texto
+        {
+            get
+            {
+                return texto;
+            }
+            set 
+            {
+                texto = value;
+                OnPropertyChanged();
+            }
+
+        }
+
+        #endregion
+        
+        #region Constructors
+        public MainWindowsViewModel(Repository rep) : base(new List<BaseDetails<Wine>>())
+        {
+            wineRep = rep;
+            UpdateFreeContainers();
+            UpdateButton();
+            InsertingWineViewModel.AddedWine += (sender, args) => {
+                UpdateFreeContainers();
+                UpdateWines();
+                UpdateButton();
+            };
+            InsertingContainerViewModel.AddedContainer += (sender, args) => {
+                UpdateFreeContainers();
+                UpdateButton();
+            };
+            Wines = new WineListViewModel(new System.Collections.Generic.List<BaseDetails<Wine>>());
+            UpdateWines();
+            //Wines.PropertyChanged += Wines_PropertyChanged;
+            Wines.PropertyChanged += Wines_PropertyChanged;
+        }
+
+        #endregion
+        
+        #region Commands
+        public ICommand CreateWineCommand
+        {
+            get
+            {
+                return createWineCommand ?? (createWineCommand=new CommandHandler(parameter=>CreateWine(),parameter=>true));
+            }
+        }
+        public ICommand AddContainerCommand
+        {
+            get
+            {
+                return addContainerCommand ?? (addContainerCommand = new CommandHandler(parameter => AddContainer(), parameter => true));
+            }
+        }
+        public CommandHandler DeleteWineCommand
+        {
+            get
+            {
+                return deleteWineCommand ?? (deleteWineCommand = new CommandHandler(parameter => DeleteWine((WineDetailsViewModel)Wines.Selected), parameter => Wines.Selected!=null));
+            }
+        }
+
+
+        #endregion
+
+        #region Events
+        public event EventHandler OnRequestClose;
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        #endregion
+        
+        #region EventHandlers
+        public void OnPropertyChanged(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
+        #endregion
         public void UpdateFreeContainers() 
         { 
             Containers = (from c in wineRep.Containers
@@ -75,53 +173,7 @@ namespace WineMakingMonitoringApp.ViewModels
                 EnableAddWineButton = false;
             }
         }
-        private bool enableAddWineButton;
-        public bool EnableAddWineButton
-        {
-            get
-            {
-                return enableAddWineButton;
-                
-            }
-            set 
-            { 
-                enableAddWineButton = value;
-                OnPropertyChanged();
-            }
-        }
-        private string texto;
-        public string Texto
-        {
-            get
-            {
-                return texto;
-            }
-            set 
-            {
-                texto = value;
-                OnPropertyChanged();
-            }
 
-        }
-        public MainWindowsViewModel(Repository rep) : base(new List<BaseDetails<Wine>>())
-        {
-            wineRep = rep;
-            UpdateFreeContainers();
-            UpdateButton();
-            InsertingWineViewModel.AddedWine += (sender, args) => {
-                UpdateFreeContainers();
-                UpdateWines();
-                UpdateButton();
-            };
-            InsertingContainerViewModel.AddedContainer += (sender, args) => {
-                UpdateFreeContainers();
-                UpdateButton();
-            };
-            Wines = new WineListViewModel(new System.Collections.Generic.List<BaseDetails<Wine>>());
-            UpdateWines();
-            //Wines.PropertyChanged += Wines_PropertyChanged;
-            Wines.PropertyChanged += Wines_PropertyChanged;
-        }
 
         private void Wines_PropertyChanged(object? sender, PropertyChangedEventArgs e)
         {
@@ -144,35 +196,6 @@ namespace WineMakingMonitoringApp.ViewModels
             UpdateButton();
             UpdateFreeContainers();
             UpdateWines();
-        }
-        public ICommand CreateWineCommand
-        {
-            get
-            {
-                return createWineCommand ?? (createWineCommand=new CommandHandler(parameter=>CreateWine(),parameter=>true));
-            }
-        }
-        public ICommand AddContainerCommand
-        {
-            get
-            {
-                return addContainerCommand ?? (addContainerCommand = new CommandHandler(parameter => AddContainer(), parameter => true));
-            }
-        }
-        public CommandHandler DeleteWineCommand
-        {
-            get
-            {
-                return deleteWineCommand ?? (deleteWineCommand = new CommandHandler(parameter => DeleteWine((WineDetailsViewModel)Wines.Selected), parameter => Wines.Selected!=null));
-            }
-        }
-
-        public event EventHandler OnRequestClose;
-
-        public event PropertyChangedEventHandler PropertyChanged;
-        public void OnPropertyChanged(string propertyName)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 }
